@@ -9,11 +9,12 @@ public class Question3 {
 //static int temp;
 static void swap(Question q)
 {
-	int temp;
-	temp = q.e1;
-	q.e1 = q.e2;
-	q.e2 = temp;
+	
+	q.e1 ^= q.e2;
+	q.e2 ^= q.e1;
+        q.e1 ^= q.e2;
 }
+
 
 public static void main(String[] args) {
  //Create an object of class Question
